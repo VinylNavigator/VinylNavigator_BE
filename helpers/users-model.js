@@ -1,5 +1,5 @@
 const db = require('../data/dbConfig')
-const UserPost = require('./userPost-model')
+const UserPost = require('./user_post-model')
 
 module.exports = {
     add,
