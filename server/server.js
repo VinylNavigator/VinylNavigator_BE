@@ -9,6 +9,9 @@ server.use(express.json())
 server.use(cors())
 server.use(helmet())
 
+const auth = require('../auth/authentication')
+server.use('/api/auth', auth)
+
 const userRouter = require('../routers/user')
 server.use('/api/user', userRouter)
 
