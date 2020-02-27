@@ -1,4 +1,5 @@
 // Update with your config settings.
+require('dotenv').config('/.env');
 
 module.exports = {
 
@@ -22,18 +23,13 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      filename:'./data/staging.sqlite3'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    useDefaultAsTrue: true,
     migrations: {
-      tableName: 'knex_migrations'
+      directory: './data/migrations',
     }
   },
 
