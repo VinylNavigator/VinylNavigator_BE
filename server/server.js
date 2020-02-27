@@ -12,7 +12,7 @@ server.use(helmet())
 const userRouter = require('../routers/user')
 server.use('/api/user', userRouter)
 
-const userPostRouter = require('..routers/userPost')
+const userPostRouter = require('../routers/userPost')
 server.use('/api/user_post', userPostRouter)
 
 server.get('/', (req, res) => {
