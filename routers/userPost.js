@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const userPost = require('../helpers/user_post-model')
-const db = require('../data/dbConfig')
+const db = require('../data/dataConfig')
 
 
 router.get('/', (req, res) => {

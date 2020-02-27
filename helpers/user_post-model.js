@@ -1,4 +1,4 @@
-const db = require('../data/dbConfig.js')
+const db = require('../data/dataConfig.js')
 
 module.exports = {
     get, 
@@ -8,7 +8,7 @@ module.exports = {
 }
 
 function get(){
-    return db('userPost')
+    return db('user_post')
     .select([
         'user_post.id', 
         'user_post.title', 
