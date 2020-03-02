@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const db = require('../data/dbConfig')
+const db = require('../data/dataConfig')
 
 router.get('/', (req, res) => {
     db('post_album').then(response => {
