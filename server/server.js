@@ -18,6 +18,9 @@ server.use('/api/user', userRouter)
 const userPostRouter = require('../routers/userPost')
 server.use('/api/user_post', userPostRouter)
 
+const postAlbumRouter = require('..routers/post_album')
+server.use('/api/post_album', postAlbumRouter)
+
 server.get('/', (req, res) => {
     res.status(200).send("You are officially connected!")
 })
