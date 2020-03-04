@@ -38,7 +38,7 @@ module.exports = {
     useNullAsDefault: true,
     connection: process.env.DATABASE_URL,
     migrations: {
-      tableName: './data/migrations'
+      directory: './data/migrations'
     }
   }
 
