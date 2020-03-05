@@ -8,7 +8,7 @@ exports.up = function(knex) {
       table.string('members')
       table.string('tracks')
       table.string('buzz_track')
-      table.string('content')
+      table.text('content')
       table.string('album_image')
       table.string('band_image')
       table.string('link')
