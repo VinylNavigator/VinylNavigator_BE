@@ -1,7 +1,7 @@
 {
   "name": "vinylnavigator_be",
   "version": "1.0.0",
-  "description": "",
+  "description": "Greetings",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
