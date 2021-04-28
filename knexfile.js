@@ -34,6 +34,9 @@ module.exports = {
   },
 
   production: {
+
+    client: 'pg',
+    useNullAsDefault: true,
     pool: {
       min: 2,
       max: 6,
@@ -44,8 +47,6 @@ module.exports = {
       createRetryIntervalMillis: 100,
       propagateCreateError: false // <- default is true, set to false
     },
-    client: 'pg',
-    useNullAsDefault: true,
     connection: process.env.DATABASE_URL,
     migrations: {
       directory: './data/migrations'
