@@ -37,11 +37,15 @@ module.exports = {
 
     client: 'pg',
     useNullAsDefault: true,
-    pool: { min: 0, max: 30, acquireTimeoutMillis: 60 * 1000 },
+    pool: { min: 2, max: 10},
     connection: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    },
     migrations: {
       directory: './data/migrations'
     }
+    
   }
 
 };

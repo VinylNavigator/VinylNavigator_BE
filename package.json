@@ -4,8 +4,8 @@
   "description": "Greetings",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon index.js",    
     "start": "node index.js",
-    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/VinylNavigator/VinylNavigator_BE.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ryan McLaughlin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/VinylNavigator/VinylNavigator_BE/issues"
@@ -32,6 +32,6 @@
     "knex": "^0.95.4",
     "objection": "^2.2.15",
     "pg": "^8.6.0",
-    "sqlite3": "^4.1.1"
+    "sqlite3": "^5.0.2"
   }
 }
