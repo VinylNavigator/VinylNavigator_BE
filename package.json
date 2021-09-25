@@ -4,7 +4,7 @@
   "description": "Greetings",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js",    
+    "server": "nodemon index.js",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,6 +32,7 @@
     "knex": "^0.95.4",
     "objection": "^2.2.15",
     "pg": "^8.6.0",
+    "pg-connection-string": "^2.5.0",
     "sqlite3": "^5.0.2"
   }
 }

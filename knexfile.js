@@ -1,8 +1,5 @@
 // Update with your config settings.
 require('dotenv').config('.env');
-const parse = require(process.env.DATABASE_URL).parse;
-const pgconfig = parse(process.env.DATABASE_URL);
-pgconfig.ssl = { rejectUnauthorized: false };
 
 module.exports = {
 
@@ -41,7 +38,7 @@ module.exports = {
     client: 'pg',
     useNullAsDefault: true,
     pool: { min: 2, max: 10},
-    connection: pgconfig,
+    connection: process.env.DATABASE_URL,
     ssl: {
       rejectUnauthorized: false
     },
