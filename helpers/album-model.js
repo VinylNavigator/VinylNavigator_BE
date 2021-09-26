@@ -38,5 +38,5 @@ function getById(id){
 }
 
 function getByUserId(id){
-    return get().where({'album.album_id': id })
+    return get().where({'album.band_id': id })
 }

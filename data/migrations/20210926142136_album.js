@@ -1,12 +1,13 @@
 exports.up = function(knex) {
     return knex.schema.createTable('album', table => {
         table.increments()
-        table.integer('band_id')
+        table.uuid('band_id')
               .unsigned()
               .references('id')
               .inTable('band')
               .onUpdate('CASCADE')
               .onDelete("CASCADE")
+
         table.string('album_name')
         table.string('album_year')
         table.string('album_members')

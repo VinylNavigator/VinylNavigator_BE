@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable('band', table => {
         table.increments()
-        table.string('band_name')
+        table.string('band_name').unique()
         table.string('band_members')
         table.text('band_bio')
         table.string('years_active')

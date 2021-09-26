@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     const body = req.body
-    db('user_post').insert(body).then(response => {
+    db('album').insert(body).then(response => {
         res.status(200).json(response)
     })
     .catch(error => {
@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     const {id} = req.params
-    db('user_post').where({id}).del()
+    db('album').where({id}).del()
     .then(response => {
         res.status(200).json(response)
     })
