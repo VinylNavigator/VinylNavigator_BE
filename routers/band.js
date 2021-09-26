@@ -6,17 +6,17 @@ const restricted = require('../auth/restricted-middleware')
 
 
 router.get('/', (req, res) => {
-    Users.find().then(response => {
+    Band.find().then(response => {
         res.status(200).json(response)
     })
     .catch(error => {
-        res.status(500).json({error: 'There was an error retrieving the users', error})
+        res.status(500).json({error: 'There was an error retrieving the Band', error})
     })
 })
 
 router.get('/:id',  (req, res) => {
     const {id} = req.params
-    Users.findById(id).then(response => {
+    Band.findById(id).then(response => {
         if(response){
             res.status(200).json(response)    
         } else {
@@ -29,7 +29,7 @@ router.get('/:id',  (req, res) => {
 
 router.post('/', (req, res) => {
     const body = req.body
-    Users.add(body).then(response => {
+    Band.add(body).then(response => {
         if(response){
             res.status(200).json(response)
         } else {
@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
 
 router.get('/:id/band', (req, res) => {
     const { id } = req.params
-    UserPost.getByUserId(id)
+    Album.getByUserId(id)
         .then( response => {
             if(response){
                 res.status(200).json(response)
@@ -55,7 +55,7 @@ router.get('/:id/band', (req, res) => {
 router.post('/:band_id/band', (req, res) => {
     const {user_id} = req.params
     const {title, teaser, link, youTubeVideo} = req.body
-    UserPost.add({title, teaser, link, youTubeVideo, user_id: parseInt(user_id, 10)})  
+    Album.add({title, teaser, link, youTubeVideo, user_id: parseInt(user_id, 10)})  
         .then(response => {
             if(response){
                 res.status(200).json(response)   
