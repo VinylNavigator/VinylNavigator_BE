@@ -21,6 +21,9 @@ server.use('/api/user_post', userPostRouter)
 const postAlbumRouter = require('../routers/post_album')
 server.use('/api/post_album', postAlbumRouter)
 
+const bandRouter = require('../routers/band')
+server.use('/api/band', bandRouter)
+
 const albumRouter = require('../routers/album')
 server.use('/api/album', albumRouter)
 
