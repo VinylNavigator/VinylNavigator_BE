@@ -18,6 +18,12 @@ server.use('/api/user', userRouter)
 const userPostRouter = require('../routers/userPost')
 server.use('/api/user_post', userPostRouter)
 
+const bandRouter = require('../routers/band')
+server.use('/api/band', bandRouter)
+
+const albumRouter = require('../routers/album')
+server.use('/api/album', albumRouter)
+
 const postAlbumRouter = require('../routers/post_album')
 server.use('/api/post_album', postAlbumRouter)
 
