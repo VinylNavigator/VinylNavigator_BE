@@ -24,7 +24,7 @@ function get(){
         'album.similar_albums',
         'band.band_name AS band.band_name',
     ])
-    .join('band', 'band.id', 'album.album_id')
+    .join('band', 'band.id', 'album.band_id')
 }
 
 function add(user){
