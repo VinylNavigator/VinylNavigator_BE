@@ -10,6 +10,16 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+    const {id} = req.params
+    db('album').where({id}).then(response => {
+        res.status(201).json(response)
+    })
+    .catch(error => {
+        res.status(500).json({error: "There was an error retrieving the post"})
+    })
+})
+
 router.post('/', (req, res) => {
     const body = req.body
     db('album').insert(body).then(response => {
